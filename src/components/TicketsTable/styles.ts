@@ -10,7 +10,7 @@ export const Container = styled.div`
         
 
         th{
-            color: var(--wine);
+            color: var(--red);
             font-weight: 800;
             font-size: 1.5rem;
             padding: 1rem 2rem 2rem;
@@ -21,25 +21,21 @@ export const Container = styled.div`
         td{
             padding: 1rem 2rem;
             border: 0;
-            background: var(--black);
-            color: var(--yellow);
+            background: #121013;
+            color: var(--white);
             border-radius: 0.25rem;
             text-align: justify;
 
-            &:hover{
-            filter: brightness(0.9);
-        }
-
         &:first-child{
-            color: var(--purpledark)
+            color: var(--red);
         }
 
         &.inteira{
-            color: var(--green);
+            color: var(--yellow);
         }
 
         &.meiaentrada{
-            color: var(--salmon)
+            color: var(--yellow)
         }
 
 

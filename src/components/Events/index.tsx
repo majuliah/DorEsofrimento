@@ -2,7 +2,11 @@ import { Container } from './styles';
 
 export function Events(){
     return(
-        <Container>
+            <Container>
+            <div>
+                <header>
+                </header>
+            </div>
         </Container>
     )
 }

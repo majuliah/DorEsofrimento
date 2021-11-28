@@ -5,18 +5,15 @@ export const GlobalStyle = createGlobalStyle`
 :root{
     --background: #191A19;
     --white: #FEF5ED;
-    --red: #e52e4d;
-    --green: #33cc33;
-    --yellow: #ffcc00;
-    --salmon: #ff6666;
-    --pink: #cc0066;
-    --green: #66cccc;
     --purpledark: #1F1D36;
     --purplemedium: #3F3351;
     --brown: #3D0000;
     --wine: #950101;
     --black: #000000;
     --winedark: #630000;
+    --red: #F90716;
+    --yellow:  #FDFDC4;
+    --card: #44000D;
 }
 
 *{

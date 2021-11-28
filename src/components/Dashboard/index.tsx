@@ -1,6 +1,6 @@
 import { Summary } from '../Summary';
 import { TicketsTable } from '../TicketsTable';
-import { Events } from '../Events';
+// import { Events } from '../Events';
 import { Container } from './styles';
 
 export function Dashboard() {
@@ -8,7 +8,7 @@ export function Dashboard() {
         <Container>
             <Summary />
             <TicketsTable />
-            <Events />
+            {/* <Events /> */}
         </Container>
     )
 }

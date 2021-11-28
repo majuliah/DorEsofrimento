@@ -7,10 +7,10 @@ export const Container = styled.div`
     margin: -2.5rem;
 
     div{
-        background: #44000D;
+        background: var(--card);
         border-radius: 0.80rem;
         padding: 1.5rem 2rem;
-        color: #ffff;
+        color: var(--white);
         box-shadow: 0px 5px 5px 0px black;
 
         &:hover{
@@ -27,12 +27,12 @@ export const Container = styled.div`
         font-size: 2rem;
         font-weight: 500;
         line-height: 3rem;
-        color: #FDFDC4;
+        color: var(--yellow);
     }
 
     &.highlight-background{
         background: #151515;
-        color: #ffff;
+        color: var(--white);
     }
 
     }

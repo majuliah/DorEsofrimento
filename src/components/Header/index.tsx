@@ -1,11 +1,18 @@
 import  logo from '../../assets/knot.svg';
 import { Container, Content } from './styles';
-export function Header(){
+
+interface HeaderProps{
+    onOpenNewEvento: () => void;
+}
+
+
+export function Header({ onOpenNewEvento }: HeaderProps){
+
     return(
         <Container>
             <Content>
             <img src={logo} alt="logo" />
-            <button >
+            <button type="button" onClick={onOpenNewEvento}>
             ✝ ⋆EVENTO⋆ ✝
             </button>
             </Content>
