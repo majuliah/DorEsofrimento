@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 
 :root{
     --background: #191A19;
+    --white: #FEF5ED;
     --red: #e52e4d;
     --green: #33cc33;
     --yellow: #ffcc00;
@@ -39,7 +40,7 @@ body{
 }
 
 body, input, textarea, button{
-    font-family: 'Oswald' sans-serif;
+    font-family: 'Oswald';
     font-weight: 400;
 }
 
