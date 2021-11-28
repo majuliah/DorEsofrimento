@@ -9,7 +9,7 @@ export function Summary(){
         <Container>
             <div className="highlight-background">
                 <header>
-                    <p>INGRESSOS 22/12</p>
+                    <p> INGRESSOS 22/12 ☠ </p>
                     <img src={ loguinha } alt="Entrada" />
                 </header>
                 <strong>E.S.G.O.T.A.D.O</strong>

@@ -21,12 +21,13 @@ export const Content = styled.div`
         padding: 1rem 2rem;
         border-radius: 0.25rem;
         height: 3rem;
+        align-items: center;
+        display: flex;
 
         transition: filter 0.2s;
 
         &:hover{
             filter: brightness(0.3);
-
         }
     }
 

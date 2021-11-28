@@ -13,6 +13,10 @@ export const Container = styled.div`
         color: #ffff;
         box-shadow: 0px 5px 5px 0px black;
 
+        &:hover{
+            filter: brightness(0.8);
+        }
+
         header{
             display: flex;
             align-items: center;

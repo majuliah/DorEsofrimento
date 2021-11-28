@@ -6,7 +6,7 @@ export function Header(){
             <Content>
             <img src={logo} alt="logo" />
             <button >
-                + *EVENTO* +
+            ✝ ⋆EVENTO⋆ ✝
             </button>
             </Content>
         </Container>
