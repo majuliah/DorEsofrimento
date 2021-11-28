@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import { GlobalStyle } from './styles/global'
 import { Header } from './components/Header';
 import { Dashboard } from './components/Dashboard';
+import { NewIngresso } from './components/NewIngresso';
 
 function App() {
   const [isNewEvent, setNewEvent] = useState(false);
@@ -15,21 +16,14 @@ function App() {
       setNewEvent(false)
   }
 
-
-
   return (
     
     <div className="App">
       <Header onOpenNewEvento={handleNewEvent}/>
       <Dashboard />
-
-      <Modal isOpen={isNewEvent} onRequestClose={handleCloseEvent}>
-          <h2>CADASTRAR INGRESSO</h2>
-      </Modal>
-
+      <NewIngresso isOpen={isNewEvent} onRequestClose={handleCloseEvent}/>
       <GlobalStyle />
     </div>
-    
   );
 }
 
