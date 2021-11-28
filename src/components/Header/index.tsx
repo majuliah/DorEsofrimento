@@ -13,7 +13,7 @@ export function Header({ onOpenNewEvento }: HeaderProps){
             <Content>
             <img src={logo} alt="logo" />
             <button type="button" onClick={onOpenNewEvento}>
-            ✝ ⋆EVENTO⋆ ✝
+            ⸸ ⋆ EVENTO ⋆ ⸸
             </button>
             </Content>
         </Container>
