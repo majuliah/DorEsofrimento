@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     --red: #F90716;
     --yellow:  #FDFDC4;
     --card: #44000D;
+    --dark: #151515;
 }
 
 *{
@@ -52,6 +53,38 @@ button {
 [disable]{
     opacity: 0.6;
     cursor: not-allowed;
+}
+
+.react-modal-overlay{
+    background: rgba(0, 0, 0, 0.5);
+
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.react-modal-content{
+    width: 100%;
+    max-width: 576px;
+    background: linear-gradient(90deg, rgba(102, 0, 0) 25%, rgba(77, 0, 0) 45%, rgba(51, 0, 0) 60%);
+    padding: 3rem;
+    position: relative;
+    border-radius: 0.25rem;
+}
+
+.react-modal-close{
+    position: absolute;
+    right: 1.5rem;
+    left: 1.5rem;
+    border: 0;
+    background: transparent;
 }
 
 `;

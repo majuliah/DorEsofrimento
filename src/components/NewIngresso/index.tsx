@@ -1,4 +1,5 @@
 import Modal from 'react-modal';
+import fecha from '../../assets/close.svg';
 import { Container } from './styles';
 
 interface NewIngressoProps {
@@ -10,7 +11,12 @@ interface NewIngressoProps {
 export function NewIngresso({ isOpen, onRequestClose}: NewIngressoProps){
     return(
         
-        <Modal isOpen={isOpen} onRequestClose={onRequestClose}>
+        <Modal isOpen={isOpen} onRequestClose={onRequestClose} overlayClassName="react-modal-overlay" className="react-modal-content">
+            
+            <button type="button" onClick={onRequestClose} className="react-modal-close">
+                <img src={fecha} alt="fechar" />
+            
+            </button>
         <Container>
             <h2>⛧ CADASTRAR INGRESSO ⛧</h2>
                 <input type="text" placeholder="Local" />
@@ -25,7 +31,7 @@ export function NewIngresso({ isOpen, onRequestClose}: NewIngressoProps){
                 
                 <input type="text" placeholder="Lote" />
 
-                <button type="submit"> Criar </button>
+                <button type="submit"> C R I A R </button>
         </Container>
         </Modal>
         

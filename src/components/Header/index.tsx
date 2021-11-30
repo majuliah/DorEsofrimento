@@ -1,4 +1,4 @@
-import  logo from '../../assets/knot.svg';
+import  logo from '../../assets/logobig.svg';
 import { Container, Content } from './styles';
 
 interface HeaderProps{
