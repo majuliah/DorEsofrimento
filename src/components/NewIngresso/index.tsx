@@ -1,6 +1,8 @@
 import Modal from 'react-modal';
 import fecha from '../../assets/close.svg';
-import { Container } from './styles';
+import inteira from '../../assets/inteira.svg';
+import meia from '../../assets/meia.svg';
+import { Container, ModalidadeIngresso } from './styles';
 
 interface NewIngressoProps {
     isOpen: boolean;
@@ -25,7 +27,19 @@ export function NewIngresso({ isOpen, onRequestClose}: NewIngressoProps){
                 
                 <input type="time" placeholder="Horário" />
                 
-                <input type="text" placeholder="Modalidade" />
+                <ModalidadeIngresso>
+                    <button type="button">
+                        <img src={meia} alt='MEIA' />
+                        <span>MEIA-ENTRADA</span>
+                    </button>
+
+                    <button type="button">
+                        <img src={inteira} alt='INTEIRA' />
+                        <span>INTEIRA</span>
+                    </button>
+                    
+
+                </ModalidadeIngresso>
                 
                 <input type="number" placeholder="Valor" />
                 

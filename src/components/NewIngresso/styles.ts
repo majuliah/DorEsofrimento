@@ -46,7 +46,10 @@ export const Container = styled.form`
             filter: brightness(0.3);
         }
     }
+`;
 
+export const ModalidadeIngresso = styled.div`
+    
 
 
 
