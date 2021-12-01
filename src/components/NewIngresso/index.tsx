@@ -1,8 +1,7 @@
+import { useState } from 'react';
 import Modal from 'react-modal';
 import fecha from '../../assets/close.svg';
-import inteira from '../../assets/inteira.svg';
-import meia from '../../assets/meia.svg';
-import { Container, ModalidadeIngresso } from './styles';
+import { Container, ModalidadeIngresso, RadioRed } from './styles';
 
 interface NewIngressoProps {
     isOpen: boolean;
@@ -11,6 +10,9 @@ interface NewIngressoProps {
 }
 
 export function NewIngresso({ isOpen, onRequestClose}: NewIngressoProps){
+    
+    const [ type, setType ] = useState('inteira');
+    
     return(
         
         <Modal isOpen={isOpen} onRequestClose={onRequestClose} overlayClassName="react-modal-overlay" className="react-modal-content">
@@ -28,15 +30,14 @@ export function NewIngresso({ isOpen, onRequestClose}: NewIngressoProps){
                 <input type="time" placeholder="Horário" />
                 
                 <ModalidadeIngresso>
-                    <button type="button">
-                        <img src={meia} alt='MEIA' />
-                        <span>MEIA-ENTRADA</span>
-                    </button>
 
-                    <button type="button">
-                        <img src={inteira} alt='INTEIRA' />
+                    <RadioRed type="button" onClick={() => setType('meia')} isActive={type === 'meia'}>
+                        <span>MEIA-ENTRADA</span>
+                    </RadioRed>
+
+                    <RadioRed type="button" onClick={() => setType('inteira')} isActive={type === 'inteira'}>
                         <span>INTEIRA</span>
-                    </button>
+                    </RadioRed>
                     
 
                 </ModalidadeIngresso>
