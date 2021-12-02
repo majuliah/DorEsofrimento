@@ -1,6 +1,26 @@
+import { useState, useEffect } from 'react';
+import  api  from '../../services/api';
 import { Container } from "./styles"
 
+interface IIngressos {
+    id: string;
+    local: string;
+    dataEvento: string;
+    hora: string;
+    modalidade: string;
+    valor: number;
+    lote: string;
+}
+
 export function TicketsTable(){
+
+        //cadastrar
+        const[events, setEvents] = useState<IIngressos[]>([]);
+
+        useEffect(() => {
+            api.get('events').then(response => setEvents(response.data))
+        }, [])
+
     return(
         <Container>
             <table>
@@ -15,34 +35,19 @@ export function TicketsTable(){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>RIO DE JANEIRO</td>
-                        <td>22/12</td>
-                        <td>20:00 Brasilia</td>
-                        <td className='meiaentrada'>Meia-Entrada</td>
-                        <td>R$ 120,00</td>
-                        <td>Primeiro Lote</td>
+                    {events.map(events => (
+                        <tr>
+                        <td>{events.local}</td>
+                        <td>{events.dataEvento}</td>
+                        <td>{events.hora}</td>
+                        <td className='meiaentrada'>{events.modalidade}</td>
+                        <td>{events.valor}</td>
+                        <td>{events.lote}</td>
                     </tr>
-
-                    <tr>
-                        <td>SÃO PAULO</td>
-                        <td>23/12</td>
-                        <td>22:00 Brasilia</td>
-                        <td className='inteira'>Inteira</td>
-                        <td>R$ 520,00</td>
-                        <td>Segundo Lote</td>
-                    </tr>
-
-                    <tr>
-                        <td>MINAS GERAIS</td>
-                        <td>24/12</td>
-                        <td>19:00 Brasilia</td>
-                        <td>Meia-Entrada</td>
-                        <td>R$ 320,00</td>
-                        <td>Segundo Lote</td>
-                    </tr>
+                    ))}
                 </tbody>
             </table>
         </Container>
     )
 }
+
