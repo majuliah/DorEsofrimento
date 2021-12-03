@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import adm from '../../assets/cards/adm.svg';
+import adm from '../../assets/knot/adm.jpg';
 
 export const Container = styled.div`
 

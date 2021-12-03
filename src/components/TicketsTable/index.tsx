@@ -7,11 +7,11 @@ interface IIngressos {
     local: string;
     dataEvento: string;
     hora: string;
-    modalidade: string;
+    tipo: string;
     valor: number;
     lote: string;
     likes: string;
-    deslikes: string;
+    dislikes: string;
 }
 
 export function TicketsTable(){
@@ -42,28 +42,27 @@ export function TicketsTable(){
                         <td>{events.local}</td>
                         <td>{events.dataEvento}</td>
                         <td>{events.hora}</td>
-                        <td className='meiaentrada'>{events.modalidade}</td>
+                        <td className='meiaentrada'>{events.tipo}</td>
                         <td>{events.valor}</td>
                         <td>{events.lote}</td>
                         <td>
                         <li>
-                            <h1>Curti</h1>
                             <button onClick={(async () => {
                             await api.post(`/events/like/${events.id}`)
                             api.get('/events').then(likes => {setEvents(likes.data)})
                         })}>
-                            Uau
+                            Uau ☬
                             </button>
+
                             <span>{events.likes}</span>
 
-                            <h2>Eca</h2>
                             <button onClick={(async () => {
                             await api.post(`/events/dislike/${events.id}`)
-                            api.get('/events').then( deslikes => {setEvents(deslikes.data)})
+                            api.get('/events').then( dislikes => {setEvents(dislikes.data)})
                         })}>
-                            Bléh
+                            Bléh ☢
                             </button>
-                            <span>{events.deslikes}</span>
+                            <span>{events.dislikes}</span>
                             </li>
                         </td>
                     </tr>
