@@ -17,12 +17,13 @@ export function NewIngresso({ isOpen, onRequestClose}: NewIngressoProps){
     const[hora, setHora] = useState('');
     const[valor, setValor] = useState(0);
     const[lote, setLote] = useState('');
-    const[type, setType] = useState('inteira');
+    const[tipo, setType] = useState('inteira');
     
     async function handleCreateNewIngresso(event: FormEvent){
         event.preventDefault();
 
-        const data = {local, dataEvento, hora, valor, lote, type};
+        const data = {local, dataEvento, hora, valor, lote, tipo};
+        console.log(data);
 
         await api.post('/events', data)
 
@@ -54,11 +55,11 @@ export function NewIngresso({ isOpen, onRequestClose}: NewIngressoProps){
                 
                 <ModalidadeIngresso>
 
-                    <RadioRed type="button" onClick={() => setType('meia')} isActive={type === 'meia'}>
+                    <RadioRed type="button" onClick={() => setType('meia')} isActive={tipo === 'meia'}>
                         <span>MEIA-ENTRADA</span>
                     </RadioRed>
 
-                    <RadioRed type="button" onClick={() => setType('inteira')} isActive={type === 'inteira'}>
+                    <RadioRed type="button" onClick={() => setType('inteira')} isActive={tipo === 'inteira'}>
                         <span>INTEIRA</span>
                     </RadioRed>
                     
