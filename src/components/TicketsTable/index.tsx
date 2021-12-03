@@ -10,6 +10,8 @@ interface IIngressos {
     modalidade: string;
     valor: number;
     lote: string;
+    likes: string;
+    deslikes: string;
 }
 
 export function TicketsTable(){
@@ -43,6 +45,27 @@ export function TicketsTable(){
                         <td className='meiaentrada'>{events.modalidade}</td>
                         <td>{events.valor}</td>
                         <td>{events.lote}</td>
+                        <td>
+                        <li>
+                            <h1>Curti</h1>
+                            <button onClick={(async () => {
+                            await api.post(`/events/like/${events.id}`)
+                            api.get('/events').then(likes => {setEvents(likes.data)})
+                        })}>
+                            Uau
+                            </button>
+                            <span>{events.likes}</span>
+
+                            <h2>Eca</h2>
+                            <button onClick={(async () => {
+                            await api.post(`/events/dislike/${events.id}`)
+                            api.get('/events').then( deslikes => {setEvents(deslikes.data)})
+                        })}>
+                            Bléh
+                            </button>
+                            <span>{events.deslikes}</span>
+                            </li>
+                        </td>
                     </tr>
                     ))}
                 </tbody>
